@@ -1,0 +1,80 @@
+*{
+    font-family: "Lucida Console", "Courier New", monospace;
+    color: white;
+    font-size: 12pt;
+    line-height: 0.5cm;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    text-align: center;
+}
+
+h1{
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-align: center;
+    font-size: large;
+}
+hr{
+    border: 2px solid rgb(255, 255, 255);
+}
+
+fieldset {
+    /* groupping */
+    background-color: #ffffff;
+    color: black;
+    border: rgb(255, 255, 255) 4px solid;
+    /* border-radius: 30px; */
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 10px;
+    /*
+    padding: 15px; => all padding
+    padding: 15px 5px; => atas-bawah:15px, kanan-kiri:px 
+    padding: 10px 5px 10px 5px; => searah jarum jam
+    */
+    padding: 2px;
+    text-align: center;
+}
+label{
+    color: rgb(70, 70, 70);
+}
+
+input.nama[type=text]{
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: rgb(70, 70, 70);
+}
+  
+input[type=button] {
+    width: 10%;
+    background-color: black;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+input#batal:hover {
+    background-color: lightgray;
+}
+  
+input[type=button]:hover {
+    background-color: lightgray;
+}
+  
+div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    position: relative;
+}

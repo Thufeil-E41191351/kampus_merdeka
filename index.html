@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator</title>
+    <link href="./css/styleku.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" language="javascript"></script>
+</head>
+<body>
+    <h1>Kalkulator</h1>
+    <hr>
+    <div>
+        <form name="formulir" id="formulir">
+         <label>Angka 1 &nbsp;</label>
+         <input type="text"  name="a1" placeholder="masukkan angka ke 1" class="nama" value=""><br>
+         <label>Angka 2 &nbsp;</label>
+         <input type="text"  name="a2" placeholder="masukkan angka ke 2" class="nama" value=""><br>
+         <label>Hasil &nbsp; &nbsp;</label>
+         <input type="text" name="hasil" placeholder="0" class="nama" value="" disabled><br>
+          <br>
+         <input type="button" onclick="hitung(this.value)" name="tambah" value="+">
+         <input type="button" onclick="hitung(this.value)" name="kurang" value="-">
+         <input type="button" onclick="hitung(this.value)" name="kali" value="x">
+         <input type="button" onclick="hitung(this.value)" name="bagi" value="/">
+         <input type="button" onclick="hitung(this.value)" name="pangkat" value="^">
+         <input type="button" onclick="batal()" value="Batal"> 
+        </form>
+      </div>
+      <script src="./js/kalkulator.js"></script>
+</body>
+</html>
