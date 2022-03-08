@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info Gempa Hari Ini</title>
+    <link href="./css/style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" language="javascript"></script>
+</head>
+<body>
+    <h1>Info Gempa Hari Ini</h1>
+    <hr>
+    <script>
+        class Gempa {
+      constructor(lokasi, skala) {
+        this.lokasi = lokasi;
+        this.skala = skala;
+      }
+      dampak() {
+        let dampak;
+        if (this.skala >= 0 && this.skala <= 2) {
+          dampak = "Dampaknya tidak terasa";
+        } else if (this.skala > 2 && this.skala <= 4) {
+          dampak = "Dampaknya Bangunan Retak-Retak";
+        } else if (this.skala > 4 && this.skala <= 6) {
+          dampak = "Dampaknya Bangunan Roboh";
+        } else if (this.skala > 6) {
+          dampak = "Dampaknya Bangunan Roboh dan Berpotensi Tsunami";
+        } else {
+          dampak = "tidak ada gempa";
+        }
+        document.write(`Lokasi Gempa : ${this.lokasi}
+          <br/> Skala : ${this.skala}
+          <br/> Dampak ${dampak} <hr>`);
+      }
+    }
+    let a = new Gempa("Jakarta", 1);
+    let b = new Gempa("Manila", 2);
+    let c = new Gempa("Singapura", 3);
+    let d = new Gempa("Bandar Seri Begawan", 4);
+    let e = new Gempa("Hanoi", 5);
+    let f = new Gempa("Vientiane", 6);
+    let g = new Gempa("Rangon", 7);
+    let h = new Gempa("Phnom Phen", 8);
+    let i = new Gempa("Cina", 9);
+    let j = new Gempa("Korea", 10);
+    a.dampak();
+    b.dampak();
+    c.dampak();
+    d.dampak();
+    e.dampak();
+    f.dampak();
+    g.dampak();
+    h.dampak();
+    i.dampak();
+    j.dampak();
+    </script>
+</body>
+</html>
