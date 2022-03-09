@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="csstugas8/tugas8_1.css">
+    <title>Suara Suara Binatang</title>
+</head>
+<body>
+    <div class="container">
+        <h3>Klik Nama Hewan</h3>
+        <div class="bingkai" id="bingkai">
+            <div class="tombol">
+                <hr>
+                <button class="btn" id="ayam">Anak Ayam</button>
+                <button class="btn" id="bebek">Bebek</button>
+                <button class="btn" id="camar">Burung Camar</button>
+                <button class="btn" id="angsa">Angsa</button>
+                <div class="clear"></div>
+                <hr>
+                <div class="batal">
+                    <input id="bersih" type="button" value="Bersih" class="bersih">
+                </div>
+            </div>
+        </div>
+
+        <audio id="audioAyam" src="audiotugas8/ayam.mp3" type="audio/mpeg"></audio>
+        <audio id="audioBebek" src="audiotugas8/bebek.mp3" type="audio/mpeg"></audio>
+        <audio id="audioCamar" src="audiotugas8/camar.mp3" type="audio/mpeg"></audio>
+        <audio id="audioAngsa" src="audiotugas8/angsa.mp3" type="audio/mpeg"></audio>
+    </div>
+
+
+
+    <!-- <script src="js/jquery.js"></script> -->
+    <script src="jstugas8/jquery-min.js"></script>
+    <script>
+        $("document").ready(function () {
+            //control audio
+            var audioAyam = $("#audioAyam")[0];
+            var audioBebek = $("#audioBebek")[0];
+            var audioCamar = $("#audioCamar")[0];
+            var audioAngsa = $("#audioAngsa")[0];
+
+            $("#ayam").click(function () {
+                $(".bingkai").css({
+                    "background-image": "url(imgtugas8/ayam.jpg)",
+                })
+                audioAyam.play();
+                audioBebek.pause();
+                audioCamar.pause();
+                audioAngsa.pause();
+            })
+            $("#bebek").click(function () {
+                $(".bingkai").css({
+                    "background-image": "url(imgtugas8/bebek.jpg)",
+                })
+                audioBebek.play();
+                audioAyam.pause();
+                audioCamar.pause();
+                audioAngsa.pause();
+            })
+            $("#camar").click(function () {
+                $(".bingkai").css({
+                    "background-image": "url(imgtugas8/camar.jpg)",
+                })
+                audioAyam.pause();
+                audioBebek.pause();
+                audioCamar.play();
+                audioAngsa.pause();
+            })
+            $("#angsa").click(function () {
+                $(".bingkai").css({
+                    "background-image": "url(imgtugas8/angsa.jpg)",
+                })
+                audioAyam.pause();
+                audioBebek.pause();
+                audioCamar.pause();
+                audioAngsa.play();
+            })
+            $("#bersih").click(function () {
+                $(".bingkai").css({
+                    "background-image": "none",
+                })
+                audioAyam.pause();
+                audioBebek.pause();
+                audioCamar.pause();
+                audioAngsa.pause();
+            })
+        });
+    </script>
+</body>
+</html>
